@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Client Presentation Prompt</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Domine" rel="stylesheet">
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      background: #fcfcfc;
+      color: #222;
+      text-align: center;
+      position: relative;
+      font-family: 'Domine', serif;
+      font-size: 15px;
+    }
+    h1 {
+      text-transform: uppercase;
+      display: block;
+      letter-spacing: 0.3em;
+      font-weight: normal;
+      font-size: 1em;
+      margin: 4em auto 0;
+      width: 80%;
+    }
+    p#client_prompt {
+      font-size: 2em;
+      line-height: 1.2em;
+      width: 80%;
+      margin: 1.5em auto;
+    }
+    p#client_prompt span {
+      background-color: #cfcfcf;
+    }
+    a {
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      padding: 0.5em 1em;
+      color: #2592bd;
+      border: solid 1px #2592bd;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+  </style>
+</head>
+<body>
+  <div id="wrapper">
+    <h1>Your presentation brief:</h1>
+    <p id="client_prompt">Loading...</p>
+    <p><a id="again">Try Again</a></p>
+  </div>
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+  integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+  crossorigin="anonymous"></script>
+  <script language="JavaScript" type="text/javascript" src="tracery.js"></script>
+  <script language="JavaScript" type="text/javascript" src="madlibs.js"></script>
+  <script language="JavaScript" type="text/javascript">
+  <!--
+
+    console.log('madlibs is ', madlibs);
+    var grammar = tracery.createGrammar(madlibs);
+
+    var promptPara = document.querySelector('#client_prompt');
+    var regenerate = function regenerate () {
+      //e.preventDefault();
+      //e.stopPropagation();
+      promptPara.innerHTML = grammar.flatten("#origin#");
+      return false;
+    }
+    document.querySelector('#again').addEventListener("click", regenerate);
+    regenerate();
+
+  //-->
+  </script>
+</body>
+</html>
