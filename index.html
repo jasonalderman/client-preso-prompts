@@ -46,6 +46,18 @@
       border-radius: 3px;
       cursor: pointer;
     }
+    a.gitlink {
+	    display: block;
+	    text-align: center;
+	    color: transparent;
+	    background: url('./octocat.svg') no-repeat center center;
+	    background-size: 32px 32px;
+	    width: 32px;
+	    border: none;
+	    padding: 0;
+	    margin: 2em auto 0;
+	    min-height: 32px;
+    }
 
   </style>
 </head>
@@ -54,6 +66,7 @@
     <h1>Your presentation brief:</h1>
     <p id="client_prompt">Loading...</p>
     <p><a id="again" href="#">Try Again</a></p>
+		<a href="https://github.com/jasonalderman/client-preso-prompts" class="gitlink" title="View this project on GitHub"></a>
   </div>
   <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
